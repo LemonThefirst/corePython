@@ -21,6 +21,7 @@ class DuplexChat(protocol.Protocol):
                 self.transport.write(data.encode('utf-8'))
             else:
                 self.transport.loseConnection()
+                break
 
 
 factory = protocol.Factory()
